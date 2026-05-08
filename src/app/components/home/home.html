@@ -1,13 +1,36 @@
 <h1>Seja bem vindo ao curso de angular</h1>
-<div class="row">
-     <div class="col"> 
-    <img class ="img-fluid" src="img/logo_horacio.png"alt="">
-    </div>
-        <div class="col">
-            <img class ="img-fluid" src="img/crud.png" alt="">
-        </div>
-   
 
-<button class="btn btn-success" (click)="testeVariaveis()">Testar</button>
 
+<h4 class = text-danger>{{anuncio}}</h4>
+
+
+<div class="card" style="width: 18rem;"> 
+    <img [src]="foto">
+
+  <img src="..." class="card-img-top" alt="..."> 
+  <div class="card-body">
+    <h5 class="card-title">{{nomeProduto}}
+        <!--
+
+        <span *ngIf="promocao; else elseBlock" class="badge text-bg-success">Promoção</span>
+        <ng-template #elseBlock>
+            <span class="badge text-bg-primary">Aproveite</span>
+
+
+        </ng-template>
+        -->
+
+        @if (promocao) {
+                    <span class="badge text-bg-success">Promoção</span>
+                        }@else {
+                                        <span class="badge text-bg-primary">Aproveite</span>
+                        }
+
+
+
+    </h5>
+    <p class="card-text">Identificação : {{idProduto}}</p>
+    <a href="#" class="btn btn-primary float-end">R$ {{precoProduto}}</a>
+  </div>
 </div>
+
